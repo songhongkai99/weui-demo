@@ -1,0 +1,38 @@
+//px转换rem 传入参数不需要加px
+@function ptr($px) {
+  $browser-default-font-size: 16 !default; //px
+  @return $px / $browser-default-font-size * 1rem;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  color: #111;
+}
+
+a {
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+//placeholder颜色设置
+::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+//常用样式
+.fn-hide {
+  display: none !important;
+}
+
+.clearfix:after {
+  display: table;
+  content: "";
+  clear: both;
+}

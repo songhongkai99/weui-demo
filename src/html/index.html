@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>标题</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <script>
+        // rem 字体适配
+        (function () {
+            function changeRem() {
+                var viewWidth = document.documentElement.clientWidth;
+                var oHtml = document.getElementsByTagName('html')[0];
+                if (viewWidth < 375) {
+                    oHtml.style.fontSize = viewWidth * 16 / 375 + 'px';
+                } else {
+                    oHtml.style.fontSize = 16 + 'px';
+                }
+            }
+
+            changeRem();
+            window.addEventListener('resize', changeRem);
+        }());
+    </script>
+
+    <!--styles-->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/weui.css">
+    <link rel="stylesheet" href="../css/jquery-weui.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
+</head>
+<body>
+
+<div class="weui-tab">
+    <div class="weui-navbar">
+        <div class="weui-navbar__item weui-bar__item--on">
+            选项一
+        </div>
+        <div class="weui-navbar__item">
+            选项二
+        </div>
+        <div class="weui-navbar__item">
+            选项三
+        </div>
+    </div>
+    <div class="weui-tab__bd">
+
+        <input type="text" id="a">
+
+    </div>
+
+    <div class="weui-tabbar">
+        <a href="javascript:;" class="weui-tabbar__item weui-bar__item--on">
+            <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>
+            <div class="weui-tabbar__icon">
+                <img src="../img/icon_nav_button.png" alt="">
+            </div>
+            <p class="weui-tabbar__label">微信</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon">
+                <img src="../img/icon_nav_msg.png" alt="">
+            </div>
+            <p class="weui-tabbar__label">通讯录</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon">
+                <img src="../img/icon_nav_article.png" alt="">
+            </div>
+            <p class="weui-tabbar__label">发现</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon">
+                <img src="../img/icon_nav_cell.png" alt="">
+            </div>
+            <p class="weui-tabbar__label">我</p>
+        </a>
+    </div>
+</div>
+
+<div class="weui-flex">
+    <div class="weui-flex__item">weui</div>
+    <div class="weui-flex__item">weui</div>
+</div>
+
+<div class="weui-loadmore">
+    <i class="weui-loading"></i>
+    <span class="weui-loadmore__tips">正在加载</span>
+</div>
+<div class="weui-loadmore weui-loadmore_line">
+    <span class="weui-loadmore__tips">暂无数据</span>
+</div>
+<div class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+    <span class="weui-loadmore__tips"></span>
+</div>
+
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="../img/swiper-1.jpg"/></div>
+        <div class="swiper-slide"><img src="../img/swiper-2.jpg"/></div>
+        <div class="swiper-slide"><img src="../img/swiper-3.jpg"/></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+
+<!--scripts-->
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery-weui.js"></script>
+<script src="../js/swiper.js"></script>
+<script src="../js/scripts.js"></script>
+
+<script>
+    $(".swiper-container").swiper({
+        loop: true,
+        autoplay: 3000
+    });
+</script>
+</body>
+</html>
